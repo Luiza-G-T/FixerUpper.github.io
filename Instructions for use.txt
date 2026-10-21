@@ -1,0 +1,13 @@
+INSTRUCTIONS FOR USE
+
+1. Open XAMPP, turn on apache and and mysql
+
+2. Download files from the repository
+	- Create a website named 'FixerUpper'
+	- Place the website folder in XAMPP's htdocs
+
+3. Import the sql database into PhpMyAdmin
+
+4. Access by using 'http://localhost/FixerUpper/index.html'
+
+5. Test the website

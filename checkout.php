@@ -1,0 +1,80 @@
+<?php
+
+session_start();
+require_once __DIR__ . '/includes/db.php';
+
+
+
+if (empty($_SESSION['cart']) || !is_array($_SESSION['cart'])) {
+    header('Location: cart.php');
+    exit;
+}
+
+if (empty($_SESSION['csrf_token'])){
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+//if customer is logged in, continue to their order confir
+
+if(isset($_SESSION['user_id'])) {
+    header('Location: confirm-order.php');
+    exit;
+}
+
+function h($value): string {
+    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<!--Head START-->
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixerUpper | Quality appliances for Every Home
+    <meta name="description" content="Diascover quality home appliances at fixer upper, with convenient collection and delivery options">
+    </title>
+
+<!--link to CSS stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+<!--Font awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+<!--Head END--------------------------------------------------------------------------->
+
+<!--Body------------------------------------------------------------------------------->
+<body>
+<!--Navigation---------------------->
+    <header> 
+        <nav id="navigation_bar">
+            <h1 id="Nav_Title_FixerUpper"><span>FixerUpper</span></h1>  
+                <div class="nav-links">
+                    <a href="index.html" class="btn" aria-current="page">Home</a> 
+                    <a href="office.html" class="btn">Office</a>
+                    <a href="kitchen.html" class="btn">Kitchen</a> 
+                    <a href="cart.php" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="account.html" class="btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                </div>
+    </header>
+
+<!--Main Content-------------------->
+<main>
+
+<main class="auth-page">
+    <h1>Checkout</h1>
+    <p>Please login or create an account to proceed to checkout</p>
+
+    <p><a class="checkout-button" href="login.php">Login to your account</a></p>
+     <p><a class="checkout-button" href="register.php">Register an account</a></p>
+      <p><a href="cart.php">Return to cart</a></p>
+    </main>
+<!--Footer-->
+<footer id="footer">
+    <p>&copy; <span id="copyroght-year">2026</span> FixerUpper. All rights reserved.</p>
+</footer>
+</body>
+</html>
+        

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head START-->
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixerUpper | Quality appliances for Every Home
+    <meta name="description" content="Diascover quality home appliances at fixer upper, with convenient collection and delivery options">
+    </title>
+
+<!--link to CSS stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+<!--Font awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+<!--Head END--------------------------------------------------------------------------->
+
+
+<!--Body------------------------------------------------------------------------------->
+
+<!--Navigation---------------------->
+    <header> 
+        <nav id="navigation_bar">
+            <h1 id="Nav_Title_FixerUpper"><span>FixerUpper</span></h1>  
+                <div class="nav-links">
+                    <a href="index.html" class="btn" aria-current="page">Home</a> 
+                    <a href="office.html" class="btn">Office</a>
+                    <a href="kitchen.html" class="btn">Kitchen</a> 
+                    <a href="cart.php" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a href="account.html" class="btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+                </div>
+    </header>
+
+<!--Main Content-------------------->
+<main>
+    <!--Hero Banner-->
+    <section id="header" aria-labelledby="Banner_Title">
+        <h1 id="Banner_Title">Shop our Kitchen Range</h1>
+        <p id="Banner_Desc">Enhance your kitchen with our Kitchen Appliances</p>
+    </section>
+
+<!---------------------------Page Introduction------------------>
+
+        <section id="office-intro">
+            <h1>Kitchen Appliances</h1>
+        
+    <!--------Product Catalog---------------------------------------->
+
+            <section id="0ffice-products" aria-labelledby="office-products-heading">
+                <h2 id="office-products-heading">Explore our products</h2>
+                <hr>
+                <div class="card-container">
+
+                    <!--Product 1-->
+                    <article class="card">
+                        <img src="Images/FRIDGE.png" alt="Fridge" loading="lazy">
+
+                        <div class="card-content">
+ <!--Fridge-->      <h3>Fridge</h3>
+                            <p class="description">Samsung<br>Refridgerator<br></p>
+                            <P class="price"> 1020.99</P>                     
+                            <form action="add-to-cart.php" method="post">
+                                <input type="hidden" name="product_id" value="fridge">
+                                <button type="submit" class="add_to_cart">Add to Cart</button>
+                            </form>
+                        </div>
+                    </article>
+
+                     <!--Product 1-->
+                    <article class="card">
+                        <img src="Images/oven.avif" alt="oven" loading="lazy">
+
+                        <div class="card-content">
+ <!--Stove -->      <h3>Oven</h3>
+                            <p class="description">AEG<BR>Stove & Oven</p>
+                            <P class="price"> 85.00</P>
+                            <form action="add-to-cart.php" method="post">
+                                <input type="hidden" name="product_id" value="oven">
+                                <button type="submit" class="add_to_cart">Add to Cart</button>
+                            </form>
+                        </div>
+                    </article>
+
+                     <!--Product 2-->
+                    <article class="card">
+                        <img src="Images/micro.webp" alt="microwave" loading="lazy">
+                        <div class="card-content">
+ <!--Microwave-->      <h3>Microwave</h3>
+                            <p class="description">DAEWOO<br>Black Microwave</p>
+                            <P class="price"> 78.99</P>
+                            <form action="add-to-cart.php" method="post">
+                                <input type="hidden" name="product_id" value="microwave">
+                                <button type="submit" class="add_to_cart">Add to Cart</button>
+                            </form>
+                        </div>
+                    </article>
+
+
+                     <!--Product 3-->
+                    <article class="card">
+                        <img src="Images/standmixer.webp" alt="standmixer" loading="lazy">
+                        <div class="card-content">
+ <!--Stand Mixer-->      <h3>Stand Mixer</h3>
+                            <p class="description">KirchenAid<br>Stand Mixer</p>
+                            <P class="price"> 390.00</P>
+                            <form action="add-to-cart.php" method="post">
+                                <input type="hidden" name="product_id" value="stand-mixer">
+                                <button type="submit" class="add_to_cart">Add to Cart</button>
+                            </form>
+                        </div>
+                    </article>
+</main>
+
+<!--Footer-->
+<footer id="footer">
+    <p>&copy; <span id="copyroght-year">2026</span> FixerUpper. All rights reserved.</p>
+</footer>
+</body>
+</html>
+        
